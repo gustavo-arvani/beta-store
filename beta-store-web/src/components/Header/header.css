@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: #F3F5F8;
+    background-color: var(--background-color);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
 }
 
@@ -32,14 +32,14 @@
     font-weight: 500;
     letter-spacing: 14px;
     margin-bottom: -6px;
-    color: #01258F;
+    color: var(--title-color);
 }
 
 .logo span{
     font-size: 1em;
     font-weight: 400;
     letter-spacing: 10px;
-    color: #01258F;
+    color: var(--title-color);
 }
 
 .links{
