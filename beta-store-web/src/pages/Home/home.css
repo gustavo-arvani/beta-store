@@ -10,9 +10,28 @@
     margin-top: 140px;
 }
 
-.home h2{
+.home .clothes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../../assets/clothes2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.364);
+
+    width: 95%;
+    height: 350px;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+
+.home .clothes span{
+    display: flex;
+    text-align: center;
+    width: 50%;
+    font-size: 1.3em;
 }
 
 
@@ -35,7 +54,7 @@
     height: 450px;
     
     margin-bottom: 20px;
-    margin-left: 20px;
+    margin-left: 12px;
 
     border: 2px solid #606060;
     background-color: var(--background-color);

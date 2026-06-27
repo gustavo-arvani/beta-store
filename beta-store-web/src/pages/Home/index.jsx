@@ -42,13 +42,14 @@ function Home() {
   const firstItems = store.slice(0, 8);
   return (
     <div className="home">
-      <h2>O QUE VOCÊ PRECISA ESTÁ AQUI!</h2>
+      <div className="clothes">
+        <span>Explore nossa seleção de roupas, acessórios, eletrônicos e muito mais.</span>
+      </div>
 
       <div className="products">
         {firstItems.map((item) => {
           return (
             <div className="container">
-
               <div key={item.id} className="card">
                 <div className="image">
                   <Link to="">
@@ -76,7 +77,9 @@ function Home() {
         })}
       </div>
 
-      <button><Link to="/produtos">Todos os Produtos</Link></button>
+      <button>
+        <Link to="/produtos">Todos os Produtos</Link>
+      </button>
     </div>
   );
 }
