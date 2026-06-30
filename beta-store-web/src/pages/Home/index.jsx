@@ -40,10 +40,13 @@ function Home() {
   };
 
   const firstItems = store.slice(0, 8);
+  
   return (
     <div className="home">
       <div className="clothes">
-        <span>Explore nossa seleção de roupas, acessórios, eletrônicos e muito mais.</span>
+        <span>
+          Explore nossa seleção de roupas, acessórios, eletrônicos e muito mais.
+        </span>
       </div>
 
       <div className="products">
@@ -80,6 +83,13 @@ function Home() {
       <button>
         <Link to="/produtos">Todos os Produtos</Link>
       </button>
+
+      <div className="categories">
+        <Link to="/produtos?categoria=electronics">Eletrônicos</Link>
+        <Link to="/produtos?categoria=jewelery">Jóias</Link>
+        <Link to="/produtos?categoria=men's clothing">Moda Masculina</Link>
+        <Link to="/produtos?categoria=women's clothing">Moda Feminina</Link>
+      </div>
     </div>
   );
 }
