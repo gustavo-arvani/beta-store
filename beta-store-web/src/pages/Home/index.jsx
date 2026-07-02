@@ -84,11 +84,16 @@ function Home() {
         <Link to="/produtos">Todos os Produtos</Link>
       </button>
 
+      <h2 className="h2-category">Compre por categoria</h2>
+
       <div className="categories">
-        <Link to="/produtos?categoria=electronics">Eletrônicos</Link>
-        <Link to="/produtos?categoria=jewelery">Jóias</Link>
-        <Link to="/produtos?categoria=men's clothing">Moda Masculina</Link>
-        <Link to="/produtos?categoria=women's clothing">Moda Feminina</Link>
+        <Link to="/produtos?categoria=electronics" className="electronics"><span>Eletrônicos</span></Link>
+
+        <Link to="/produtos?categoria=jewelery" className="jewelery"><span>Jóias</span></Link>
+
+        <Link to="/produtos?categoria=men's clothing" className="mens"><span>Moda Masculina</span></Link>
+
+        <Link to="/produtos?categoria=women's clothing" className="women"><span>Moda Feminina</span></Link>
       </div>
     </div>
   );
