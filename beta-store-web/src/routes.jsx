@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Produto from './pages/Produtos';
+import Detalhes from './pages/Detalhes'
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -13,6 +14,7 @@ function RoutesApp(){
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path="/produtos" element={<Produto />} />
+                <Route path="/detalhes/:id" element={<Detalhes />}/>
             </Routes>
             <Footer/>
         </BrowserRouter>

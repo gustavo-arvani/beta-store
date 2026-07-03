@@ -72,7 +72,7 @@ function Produtos() {
         {produtosFiltrados.map((item) => {
           return (
             <div key={item.id} className="card">
-              <Link className="card-link">
+              <Link to={`/detalhes/${item.id}`} className="card-link">
                 <div className="image">
                   <img src={item.image} alt="" />
                 </div>
