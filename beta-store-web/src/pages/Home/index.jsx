@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./home.css";
+import { translations } from "../../data/translations";
 
 function Home() {
   const [store, setStore] = useState([]);
@@ -18,26 +19,6 @@ function Home() {
 
     loadApi();
   }, []);
-
-  const translations = {
-    "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops":
-      "Mochila Fjallraven",
-
-    "Mens Casual Premium Slim Fit T-Shirts ": "Camiseta Premium Masculina",
-
-    "Mens Cotton Jacket": "Jaqueta de Algodão",
-
-    "Mens Casual Slim Fit": "Camiseta Slim Fit",
-
-    "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet":
-      "Pulseira Naga",
-
-    "Solid Gold Petite Micropave ": "Anel Micropavê",
-
-    "White Gold Plated Princess": "Anel Princesa",
-
-    "Pierced Owl Rose Gold Plated Stainless Steel Double": "Brinco Ouro Rosé",
-  };
 
   const firstItems = store.slice(0, 8);
   
