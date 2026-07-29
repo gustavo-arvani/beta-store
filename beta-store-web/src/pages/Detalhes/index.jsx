@@ -15,6 +15,7 @@ function Detalhes() {
     "men's clothing": "Moda Masculina",
     "women's clothing": "Moda Feminina",
   };
+  const [produtosRelacionados, setProdutosRelacionados] = useState([]);
 
   useEffect(() => {
     function loadApi() {
