@@ -7,15 +7,17 @@ import { translations, descriptionTranslations } from "../../data/translations";
 function Detalhes() {
   const { id } = useParams();
   const [detalhesProduto, setDetalhes] = useState({});
+  const [produtosRelacionados, setProdutosRelacionados] = useState([]);
+
   const [infoAberta, setInfoAberta] = useState(true);
   const [freteAberta, setFreteAberta] = useState(false);
+
   const categoryTranslations = {
     electronics: "Eletrônicos",
     jewelery: "Joias",
     "men's clothing": "Moda Masculina",
     "women's clothing": "Moda Feminina",
   };
-  const [produtosRelacionados, setProdutosRelacionados] = useState([]);
 
   useEffect(() => {
     function loadApi() {
@@ -27,6 +29,25 @@ function Detalhes() {
 
     loadApi();
   }, []);
+
+  const produtosExibidos = produtosRelacionados.slice(0, 4);
+
+  useEffect(() => {
+    function loadRelatedProducts() {
+      let apiUrl = "https://fakestoreapi.com/Products";
+      fetch(apiUrl)
+        .then((response) => response.json())
+        .then((json) => {
+          const produtosFiltrados = json.filter(
+            (item) =>
+              item.category === detalhesProduto.category &&
+              item.id !== detalhesProduto.id,
+          );
+          setProdutosRelacionados(produtosFiltrados);
+        });
+    }
+    loadRelatedProducts();
+  }, [detalhesProduto.category]);
 
   return (
     <div className="detalhes">
@@ -101,14 +122,27 @@ function Detalhes() {
       </div>
 
       <hr />
-
-      <div>
-        <>
-          <h2>Você também pode gostar</h2>
-        </>
-        <div className="other-products">
-            
-        </div>
+      <div className="other-products-title">
+        <h2>Você também pode gostar</h2>
+      </div>
+      <div className="other-products">
+        {produtosExibidos.map((item) => {
+          return (
+            <div key={item.id} className="card">
+              <Link to={`/detalhes/${item.id}`} className="card-link">
+                <div className="image">
+                  <img src={item.image} alt={item.title} />
+                </div>
+                <div className="titles">
+                  <span>{translations[item.title] || item.title}</span>
+                  <span className="preco">
+                    R$ {item.price.toFixed(2).replace(".", ",")}
+                  </span>
+                </div>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
