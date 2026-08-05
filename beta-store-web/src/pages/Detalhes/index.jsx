@@ -28,7 +28,7 @@ function Detalhes() {
     }
 
     loadApi();
-  }, []);
+  }, [id]);
 
   const produtosExibidos = produtosRelacionados.slice(0, 4);
 
@@ -47,7 +47,7 @@ function Detalhes() {
         });
     }
     loadRelatedProducts();
-  }, [detalhesProduto.category]);
+  }, [detalhesProduto]);
 
   return (
     <div className="detalhes">

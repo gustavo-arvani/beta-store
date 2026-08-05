@@ -28,6 +28,7 @@ function Home() {
         <span>
           Explore nossa seleção de roupas, acessórios, eletrônicos e muito mais.
         </span>
+        <Link to="/produtos">Comprar</Link>
       </div>
 
       <div className="products">

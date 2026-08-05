@@ -12,6 +12,7 @@
 
 .home .clothes{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -32,6 +33,18 @@
     text-align: center;
     width: 50%;
     font-size: 1.3em;
+}
+
+.home .clothes a{
+    margin-top: 24px;
+    font-size: 1.3em;
+    color: #494949d7;
+    
+}
+
+.home .clothes a:hover{
+    color: black;
+    text-decoration: none;
 }
 
 
