@@ -39,7 +39,7 @@ function Header() {
 
         <div className="bag">
           <NavLink
-            to="/sacola"
+            to="/carrinho"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             <svg

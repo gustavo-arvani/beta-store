@@ -49,6 +49,25 @@ function Detalhes() {
     loadRelatedProducts();
   }, [detalhesProduto]);
 
+  function addCart() {
+    const itemsList = localStorage.getItem("@betastore");
+
+    let savedProducts = JSON.parse(itemsList) || [];
+
+    const hasProduct = savedProducts.some(
+      (savedProduct) => savedProduct.id === detalhesProduto.id,
+    );
+
+    if (hasProduct) {
+      alert("ESTE PRODUTO JÁ ESTÁ NO CARRINHO");
+      return;
+    }
+
+    savedProducts.push(detalhesProduto);
+    localStorage.setItem("@betastore", JSON.stringify(savedProducts));
+    alert("PRODUTO ADICIONADO AO CARRINHO");
+  }
+
   return (
     <div className="detalhes">
       <div className="navigation">
@@ -81,7 +100,11 @@ function Detalhes() {
               R$ {detalhesProduto.price.toFixed(2).replace(".", ",")}
             </span>
           )}
-          <Link>Adicionar ao carrinho</Link>
+
+          <button className="cart-button" onClick={addCart}>
+            Adicionar ao Carrinho
+          </button>
+
           <div className="infos">
             <button
               onClick={() => {

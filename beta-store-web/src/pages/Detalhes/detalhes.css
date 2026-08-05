@@ -57,11 +57,7 @@
     font-size: 1.2em;
   }
 
-  & a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  & .cart-button {
     width: 90%;
     height: 40px;
     margin-bottom: 60px;
@@ -72,9 +68,10 @@
     color: white;
     background-color: #606060;
     text-decoration: none;
+    cursor: pointer;
   }
 
-  & a:hover {
+  & .cart-button:hover {
     background-color: #606060b4;
   }
 

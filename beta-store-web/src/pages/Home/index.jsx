@@ -31,6 +31,12 @@ function Home() {
         <Link to="/produtos">Comprar</Link>
       </div>
 
+      <div className="itens-title">
+        <hr className="hr"/>
+        <h2>Em Destaque</h2>
+        <hr className="hr"/>
+      </div>
+
       <div className="products">
         {firstItems.map((item) => {
           return (
@@ -66,7 +72,11 @@ function Home() {
         <Link to="/produtos">Todos os Produtos</Link>
       </button>
 
-      <h2 className="h2-category">Compre por categoria</h2>
+       <div className="itens-title">
+        <hr className="hr"/>
+        <h2>Compre por categoria</h2>
+        <hr className="hr"/>
+      </div>
 
       <div className="categories">
         <Link to="/produtos?categoria=electronics" className="electronics"><span>Eletrônicos</span></Link>

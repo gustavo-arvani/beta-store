@@ -25,7 +25,7 @@
     width: 95%;
     height: 350px;
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .home .clothes span{
@@ -45,6 +45,27 @@
 .home .clothes a:hover{
     color: black;
     text-decoration: none;
+}
+
+.home .itens-title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home .itens-title .hr{
+    display: inline-block;
+    width: 35%;
+    margin-bottom: 5px;
+}
+
+.home .itens-title h2{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 0 17px;
+    color: var(--title-color);
 }
 
 
@@ -140,7 +161,7 @@
 /* CARDS DOS PRODUTOS 👆🏻*/
 
 .home button{
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     margin-top: 30px;
     width: 250px;
     height: 40px;
@@ -163,15 +184,6 @@
 }
 
 /*Links categorias*/
-
-.h2-category{
-    margin-right: auto;
-    margin-left: 60px;
-    margin-top: 80px;
-    text-transform: uppercase;
-    font-size: 2em;
-    font-weight: 500;
-}
 
 .home .categories{
     display: flex;
