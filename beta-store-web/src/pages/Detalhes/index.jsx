@@ -63,7 +63,9 @@ function Detalhes() {
       return;
     }
 
-    savedProducts.push(detalhesProduto);
+    const newProduct = {...detalhesProduto, quantity: 1}
+
+    savedProducts.push(newProduct);
     localStorage.setItem("@betastore", JSON.stringify(savedProducts));
     alert("PRODUTO ADICIONADO AO CARRINHO");
   }

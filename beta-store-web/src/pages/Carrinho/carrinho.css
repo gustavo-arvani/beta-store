@@ -1,5 +1,158 @@
-.carrinho{
+.carrinho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: max-content;
+  margin-top: 160px;
+
+  & .title {
+    align-self: flex-start;
+    margin: 0 0 30px 30px;
+    font-size: 2em;
+    font-weight: 400;
+  }
+
+  & .items-guide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 87%;
+
+    color: gray;
+  }
+
+  & .empty-cart {
+    height: 200px;
+    margin-top: 100px;
+  }
+
+  & .container {
     width: 100%;
-    height: 1000px;
-    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & .product {
+      display: flex;
+      width: 90%;
+      height: 250px;
+      justify-content: space-between;
+      margin: 30px;
+      background-color: var(--background-color);
+      border: 1px solid gray;
+
+      & img {
+        width: 100px;
+      }
+
+      & .product-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      & .product-info .image-product img {
+        width: 120px;
+      }
+
+      & .titlePrice {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        margin-left: 10px;
+        width: 250px;
+        font-size: 0.9em;
+      }
+
+      & .product-quantity {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 300px;
+        width: 120px;
+        height: 40px;
+
+        border: 1px solid gray;
+        background-color: white;
+
+        & button {
+          width: 40%;
+          height: 100%;
+          cursor: pointer;
+          font-size: 1.7em;
+          font-weight: 200;
+          border: none;
+          background-color: white;
+        }
+
+        & span {
+          margin: 0 15px;
+        }
+
+        
+      }
+
+      & .total-price {
+        display: flex;
+        flex-direction: column;
+
+        & button {
+          margin-top: 10px;
+          background-color: white;
+          border: 1px solid gray;
+          border-radius: 4px;
+          height: 25px;
+          cursor: pointer;
+        }
+      }
+    }
+    
+  }
+
+  & .total-finish {
+        margin-bottom: 30px;
+      }
+
+  & .finish {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    & hr {
+      width: 98%;
+      align-self: center;
+    }
+
+    & a {
+      margin: 14px 85px;
+      text-decoration: underline;
+      color: gray;
+    }
+
+    & a:hover {
+      color: black;
+    }
+
+    & button {
+      width: 180px;
+      height: 30px;
+      margin: 0 80px 40px 0;
+      border: none;
+      border-radius: 4px;
+
+      background-color: #606060;
+      box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.43);
+      color: white;
+      cursor: pointer;
+    }
+
+    & button:hover {
+      background-color: #606060b4;
+    }
+  }
 }

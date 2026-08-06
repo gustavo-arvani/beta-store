@@ -57,7 +57,10 @@ export const translations = {
     "Camiseta Feminina Esportiva",
 
   "DANVOUY Womens T Shirt Casual Cotton Short":
-    "Camiseta Feminina Casual de Algodão"
+    "Camiseta Feminina Casual de Algodão",
+
+  "men's clothing":
+    "Moda Masculina"
 };
 
 export const descriptionTranslations = {
