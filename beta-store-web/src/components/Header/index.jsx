@@ -28,13 +28,7 @@ function Header() {
           >
             PRODUTOS
           </NavLink>
-
-          <NavLink
-            to="/sobre"
-            className={({ isActive }) => (isActive ? "active" : "")}
-          >
-            SOBRE
-          </NavLink>
+            
         </div>
 
         <div className="bag">

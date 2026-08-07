@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { translations, descriptionTranslations } from "../../data/translations";
+import ProductCard from "../../components/ProductCard";
 
 function Detalhes() {
   const { id } = useParams();
@@ -153,19 +154,11 @@ function Detalhes() {
       <div className="other-products">
         {produtosExibidos.map((item) => {
           return (
-            <div key={item.id} className="card">
-              <Link to={`/detalhes/${item.id}`} className="card-link">
-                <div className="image">
-                  <img src={item.image} alt={item.title} />
-                </div>
-                <div className="titles">
-                  <span>{translations[item.title] || item.title}</span>
-                  <span className="preco">
-                    R$ {item.price.toFixed(2).replace(".", ",")}
-                  </span>
-                </div>
-              </Link>
-            </div>
+            <ProductCard
+                key={item.id}
+                item={item}
+                translations={translations}
+              />
           );
         })}
       </div>

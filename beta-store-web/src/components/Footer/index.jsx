@@ -12,15 +12,15 @@ function Footer() {
       </div>
 
       <div className="links">
-        <Link>Página Inicial</Link>
-        <Link>Contato</Link>
-        <Link>Loja Física</Link>
+        <Link to="/">Página Inicial</Link>
+        <Link to="/produtos">Todos os Produtos</Link>
+        <Link to="/carrinho">Carrinho</Link>
       </div>
 
       <div className="redes">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">TikTok</a>
+        <a href="https://www.instagram.com/" target="blank">Instagram</a>
+        <a href="https://www.facebook.com/?locale=pt_BR" target="blank">Facebook</a>
+        <a href="https://www.tiktok.com/pt-BR/" target="blank">TikTok</a>
       </div>
 
       <div className="news">
