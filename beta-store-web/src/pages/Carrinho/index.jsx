@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./carrinho.css";
 import { translations } from "../../data/translations";
+import { toast } from 'react-toastify';
 
 function Carrinho() {
   const [products, setProducts] = useState([]);
@@ -59,7 +60,7 @@ function Carrinho() {
     }
     setProducts([]);
     localStorage.setItem("@betastore", JSON.stringify([]));
-    alert("Compra concluída com sucesso!");
+    toast("Compra concluída com sucesso!");
   }
 
   const totalPrice = products.reduce((acumulador, item) => {

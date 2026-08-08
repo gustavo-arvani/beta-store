@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { translations, descriptionTranslations } from "../../data/translations";
 import ProductCard from "../../components/ProductCard";
+import { toast } from 'react-toastify';
 
 function Detalhes() {
   const { id } = useParams();
@@ -60,7 +61,7 @@ function Detalhes() {
     );
 
     if (hasProduct) {
-      alert("ESTE PRODUTO JÁ ESTÁ NO CARRINHO");
+      toast.info("ESTE PRODUTO JÁ ESTÁ NO CARRINHO");
       return;
     }
 
@@ -68,7 +69,7 @@ function Detalhes() {
 
     savedProducts.push(newProduct);
     localStorage.setItem("@betastore", JSON.stringify(savedProducts));
-    alert("PRODUTO ADICIONADO AO CARRINHO");
+    toast.success("PRODUTO ADICIONADO NO CARRINHO")
   }
 
   return (
