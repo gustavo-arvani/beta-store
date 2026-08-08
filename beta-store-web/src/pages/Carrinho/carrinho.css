@@ -13,6 +13,9 @@
     font-size: 2em;
     font-weight: 400;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.164);
+    @media screen and (max-width:950px){
+      margin-top: 40px;
+    }
   }
 
   & .items-guide {
@@ -22,6 +25,9 @@
     width: 87%;
 
     color: gray;
+    @media screen and (max-width:950px){
+      display: none;
+    }
   }
 
   & .empty-cart {
@@ -45,6 +51,12 @@
       background-color: var(--background-color);
       border: 1px solid gray;
       box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123);
+      @media screen and (max-width: 950px){
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+      }
 
       & img {
         width: 100px;
@@ -55,6 +67,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        @media screen and (max-width:950px){
+          justify-content: center;
+        }
       }
 
       & .product-info .image-product img {
@@ -68,6 +84,11 @@
         margin-left: 10px;
         width: 250px;
         font-size: 0.9em;
+        @media screen and (max-width:950px){
+          align-self: center;
+          margin-top: -110px;
+          margin-left: 20px;
+        }
       }
 
       & .product-quantity {
@@ -80,6 +101,13 @@
 
         border: 1px solid gray;
         background-color: white;
+        @media screen and (max-width:950px){
+          margin-right: 0;
+          margin-top: -90px;
+          margin-left: 20px;
+          justify-content: center;
+          width: 100px;
+        }
 
         & button {
           width: 40%;
@@ -101,6 +129,9 @@
       & .total-price {
         display: flex;
         flex-direction: column;
+        @media screen and (max-width:950px){
+          margin-left: 20px;
+        }
 
         & button {
           margin-top: 10px;
@@ -124,6 +155,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    @media screen and (max-width:950px){
+      align-items: center;
+    }
 
     & hr {
       width: 98%;
@@ -134,6 +168,9 @@
       margin: 14px 85px;
       text-decoration: underline;
       color: gray;
+      @media screen and (max-width:950px){
+        margin: 14px 0;
+      }
     }
 
     & a:hover {
@@ -151,6 +188,9 @@
       box-shadow: 2px 1px 8px rgba(0, 0, 0, 0.43);
       color: white;
       cursor: pointer;
+      @media screen and (max-width:950px){
+        margin: 0 0 40px 0;
+      }
     }
 
     & button:hover {
