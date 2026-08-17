@@ -54,13 +54,13 @@
   color: white;
 }
 
-.card .titles:hover{
-  text-decoration: none;
-}
-
 .card .titles span {
   font-weight: 400;
   text-align: center;
   margin-bottom: 10px;
   margin-top: 10px;
+}
+
+.card .titles:hover{
+  text-decoration: none;
 }
