@@ -145,6 +145,7 @@
 
 .home .categories a:hover {
   transform: scale(1.01);
+  text-decoration: none;
 }
 
 .home .categories span {
